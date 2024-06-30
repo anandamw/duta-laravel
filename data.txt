@@ -1,0 +1,35 @@
+User
+Id
+Name
+Username
+password
+Kandidat
+Id
+nama
+fakultas
+jurusan 
+domisili
+umur
+jenis_kelamin
+angkatan 
+file pdf (berkas)
+Nomer WhatsApp
+email
+visi
+misi
+foto background merah (close up dan full body) bentuk jpg
+tinggi badan
+berat badan
+
+
+Pemilihan
+Id
+Id_kandidat
+Nama
+Alasan
+date
+
+
+
+
+
