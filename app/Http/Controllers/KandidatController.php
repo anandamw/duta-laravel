@@ -11,7 +11,7 @@ class KandidatController extends Controller
     public function index()
     {
         $data = [
-            'kandidat' => Kandidat::all(),
+            'kandidats' => Kandidat::all(),
             'title' => 'Kandidat'
         ];
 
@@ -20,8 +20,6 @@ class KandidatController extends Controller
 
     public function create()
     {
-
-
         return view('admin.kandidats.kandidat_create');
     }
     public function create_action(Request $request)
@@ -36,7 +34,7 @@ class KandidatController extends Controller
         $data = [
             'nama' => $request->nama,
             'fakultas' => $request->fakultas,
-            'jurusan' => $request->jurusan,
+            'prodi' => $request->prodi,
             'domisili' => $request->domisili,
             'umur' => $request->umur,
             'jenis_kelamin' => $request->jenis_kelamin,
@@ -49,13 +47,11 @@ class KandidatController extends Controller
             'misi' => $request->misi,
             'tinggi_badan' => $request->tinggi_badan,
             'berat_badan' => $request->berat_badan,
-
         ];
 
 
-
-        $getBerkas->move('foto_kandidats');
-        $getBerkas->move('berkas_file');
+        $getBerkas->storeAs('foto_kandidats' . $file_gambar);
+        $getBerkas->storeAs('berkas_file' . $file_berkas);
 
         Kandidat::create($data);
 
@@ -77,7 +73,7 @@ class KandidatController extends Controller
         $data = [
             'nama' => $request->nama,
             'fakultas' => $request->fakultas,
-            'jurusan' => $request->jurusan,
+            'prodi' => $request->prodi,
             'domisili' => $request->domisili,
             'umur' => $request->umur,
             'jenis_kelamin' => $request->jenis_kelamin,
@@ -106,6 +102,4 @@ class KandidatController extends Controller
         Kandidat::where('id', $id)->delete();
         return redirect('/kandidat');
     }
-
-    
 }

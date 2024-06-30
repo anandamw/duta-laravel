@@ -26,14 +26,16 @@
     <!-- Title -->
     <title>Welly - Hospital Admin Dashboard Bootstrap HTML Template</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="{{ asset('') }}assets/image/png" sizes="16x16"
-        href="{{ asset('') }}assets/images/favicon.png">
-    <link href="{{ asset('') }}assets/vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('') }}assets/vendor/chartist/css/chartist.min.css">
-    <link href="{{ asset('') }}assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
-    <link href="{{ asset('') }}assets/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"
+    <link href="{{ asset('') }}assets/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon.png') }}">
+    <link href="{{ asset('assets/vendor/jqvmap/css/jqvmap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/vendor/chartist/css/chartist.min.css') }}">
+    <link href="{{ asset('assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css') }}"
         rel="stylesheet">
-    <link href="{{ asset('') }}assets/css/style.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}" rel="stylesheet">
+
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;family=Roboto:wght@100;300;400;500;700;900&amp;display=swap"
         rel="stylesheet">
@@ -58,32 +60,44 @@
                     Main wrapper start
                 ***********************************-->
     <div id="main-wrapper">
-
         @include('admin.layouts.header')
+        <div class="content-body">
+            <div class="container-fluid">
 
-        @yield('content')
-
+                @yield('content')
+            </div>
+        </div>
     </div>
 
     <!--**********************************
         Scripts
     ***********************************-->
     <!-- Required vendors -->
+    <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="{{ asset('') }}assets/vendor/global/global.min.js"></script>
     <script src="{{ asset('') }}assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
-    <script src="{{ asset('') }}assets/vendor/chart-js/chart.bundle.min.js"></script>
     <script src="{{ asset('') }}assets/js/custom.min.js"></script>
     <script src="{{ asset('') }}assets/js/deznav-init.js"></script>
-    <script src="{{ asset('') }}assets/vendor/bootstrap-datetimepicker/js/moment.js"></script>
-    <script src="{{ asset('') }}assets/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+
+    <!-- Datatable -->
+    <script src="{{ asset('') }}assets/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="{{ asset('') }}assets/js/plugins-init/datatables.init.js"></script>
+
+    <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
+
+
+    <script src="{{ asset('assets/vendor/chart-js/chart.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/bootstrap-datetimepicker/js/moment.js') }}"></script>
+    <script src="{{ asset('assets/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js') }}"></script>
     <!-- Chart piety plugin files -->
-    <script src="{{ asset('') }}assets/vendor/peity/jquery.peity.min.js"></script>
+    <script src="{{ asset('assets/vendor/peity/jquery.peity.min.js') }}"></script>
 
     <!-- Apex Chart -->
-    <script src="{{ asset('') }}assets/vendor/apexchart/apexchart.js"></script>
+    <script src="{{ asset('assets/vendor/apexchart/apexchart.js') }}"></script>
 
     <!-- Dashboard 1 -->
-    <script src="{{ asset('') }}assets/js/dashboard/dashboard-1.js"></script>
+    <script src="{{ asset('assets/js/dashboard/dashboard-1.js') }}"></script>
     <script>
         $(function() {
             $('#datetimepicker1').datetimepicker({
@@ -91,8 +105,8 @@
             });
         });
     </script>
+
 </body>
 
-<!-- Mirrored from welly.dexignzone.com/xhtml/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Jun 2024 04:32:35 GMT -->
 
 </html>

@@ -4,9 +4,8 @@
 @section('content')
     <div class="col-12">
         <div class="card">
-            <div class="card-header d-flex align-items-center justify-content-between">
+            <div class="card-header">
                 <h4 class="card-title">Profile Datatable</h4>
-                <a href="/kandidat/create" class="btn btn-primary">Tambah Kandidat</a>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -15,29 +14,22 @@
                             <tr>
                                 <th>No</th>
                                 <th>Nama</th>
-                                <th>Fakultas</th>
-                                <th>Prodi</th>
-                                <th>Jenis Kelamin</th>
-                                <th>Foto</th>
-                                <th>Email</th>
+                                <th>Kandidat Yang Dipilih</th>
                                 <th>Waktu</th>
-                                <th>Action</th>
+                                <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($kandidats as $item)
+                            @foreach ($pemilihans as $item)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $item->nama }}</td>
-                                    <td>{{ $item->fakultas }}</td>
-                                    <td>{{ $item->prodi }}</td>
-                                    @if ($item->jenis_kelamin == 0)
-                                        <td>Perempuan</td>
-                                    @elseif ($item->jenis_kelamin == 1)
-                                        <td>Laki-Laki</td>
-                                    @endif
-                                    <td>{{ $item->gambar }}</td>
-                                    <td>{{ $item->email }}</td>
+                                    <td>{{ $item->nama_depan }} {{ $item->nama_belakang }}</td>
+                                    <td>
+                                        <div>
+                                            <img src="{{ asset('gambar') }}/{{ $item->gambar }}" alt="">
+                                            <div>{{ $item->nama }} </div>
+                                        </div>
+                                    </td>
                                     <td>{{ $item->created_at }}</td>
                                     <td>
                                         <div class="d-flex">

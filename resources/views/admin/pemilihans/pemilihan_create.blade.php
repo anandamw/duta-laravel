@@ -1,7 +1,5 @@
 @extends('admin.layouts.app')
 
-
-
 @section('content')
     <div class="row">
         <div class="col-lg-12">
@@ -15,113 +13,50 @@
                             <div class="row">
                                 <div class="col-xl-6">
                                     <div class="mb-3 row">
-                                        <label class="col-lg-4 col-form-label" for="validationCustom01">Name
+                                        <label class="col-lg-4 col-form-label" for="validationCustom01">Username
                                             <span class="text-danger">*</span>
                                         </label>
                                         <div class="col-lg-6">
                                             <input type="text" class="form-control" id="validationCustom01"
-                                                placeholder="Enter a Name.." required>
+                                                placeholder="Enter a username.." required>
                                             <div class="invalid-feedback">
-                                                Please enter a Name.
+                                                Please enter a username.
                                             </div>
                                         </div>
                                     </div>
                                     <div class="mb-3 row">
-                                        <label class="col-lg-4 col-form-label" for="validationCustom02">Fakultas <span
+                                        <label class="col-lg-4 col-form-label" for="validationCustom02">Email <span
                                                 class="text-danger">*</span>
                                         </label>
                                         <div class="col-lg-6">
                                             <input type="text" class="form-control" id="validationCustom02"
-                                                placeholder="Your valid Fakultas.." required>
+                                                placeholder="Your valid email.." required>
                                             <div class="invalid-feedback">
-                                                Please enter a Fakultas.
+                                                Please enter a Email.
                                             </div>
                                         </div>
                                     </div>
                                     <div class="mb-3 row">
-                                        <label class="col-lg-4 col-form-label" for="validationCustom03">Prodi
+                                        <label class="col-lg-4 col-form-label" for="validationCustom03">Password
                                             <span class="text-danger">*</span>
                                         </label>
                                         <div class="col-lg-6">
-                                            <input type="Prodi" class="form-control" id="validationCustom03"
+                                            <input type="password" class="form-control" id="validationCustom03"
                                                 placeholder="Choose a safe one.." required>
                                             <div class="invalid-feedback">
-                                                Please enter a Prodi.
+                                                Please enter a password.
                                             </div>
                                         </div>
                                     </div>
                                     <div class="mb-3 row">
-                                        <label class="col-lg-4 col-form-label" for="validationCustom03">Domisili
-                                            <span class="text-danger">*</span>
+                                        <label class="col-lg-4 col-form-label" for="validationCustom04">Suggestions <span
+                                                class="text-danger">*</span>
                                         </label>
                                         <div class="col-lg-6">
-                                            <input type="Domisili" class="form-control" id="validationCustom03"
-                                                placeholder="Choose a safe one.." required>
+                                            <textarea class="form-control" id="validationCustom04" rows="5" placeholder="What would you like to see?"
+                                                required></textarea>
                                             <div class="invalid-feedback">
-                                                Please enter a Domisili.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3 row">
-                                        <label class="col-lg-4 col-form-label" for="validationCustom03">Umur
-                                            <span class="text-danger">*</span>
-                                        </label>
-                                        <div class="col-lg-6">
-                                            <input type="Umur" class="form-control" id="validationCustom03"
-                                                placeholder="Choose a safe one.." required>
-                                            <div class="invalid-feedback">
-                                                Please enter a Umur.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3 row">
-                                        <label class="col-lg-4 col-form-label" for="validationCustom03">Umur
-                                            <span class="text-danger">*</span>
-                                        </label>
-                                        <div class="col-lg-6">
-                                            <input type="Umur" class="form-control" id="validationCustom03"
-                                                placeholder="Choose a safe one.." required>
-                                            <div class="invalid-feedback">
-                                                Please enter a Umur.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3 row">
-                                        <label class="col-lg-4 col-form-label" for="validationCustom05">Jenis Kelamin
-                                            <span class="text-danger">*</span>
-                                        </label>
-                                        <div class="col-lg-6">
-                                            <select class="default-select wide form-control" id="validationCustom05">
-                                                <option data-display="Select">Please select</option>
-                                                <option value="html">HTML</option>
-
-                                            </select>
-                                            <div class="invalid-feedback">
-                                                Please select a one.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3 row">
-                                        <label class="col-lg-4 col-form-label" for="validationCustom03">Angkatan
-                                            <span class="text-danger">*</span>
-                                        </label>
-                                        <div class="col-lg-6">
-                                            <input type="Angkatan" class="form-control" id="validationCustom03"
-                                                placeholder="Choose a safe one.." required>
-                                            <div class="invalid-feedback">
-                                                Please enter a Angkatan.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3 row">
-                                        <label class="col-lg-4 col-form-label" for="validationCustom03">Berkas
-                                            <span class="text-danger">*</span>
-                                        </label>
-                                        <div class="col-lg-6">
-                                            <input type="file" class="form-control" id="validationCustom03"
-                                                placeholder="Choose a safe one.." required>
-                                            <div class="invalid-feedback">
-                                                Please enter a Berkas.
+                                                Please enter a Suggestions.
                                             </div>
                                         </div>
                                     </div>
@@ -135,7 +70,16 @@
                                             <select class="default-select wide form-control" id="validationCustom05">
                                                 <option data-display="Select">Please select</option>
                                                 <option value="html">HTML</option>
-
+                                                <option value="css">CSS</option>
+                                                <option value="javascript">JavaScript</option>
+                                                <option value="angular">Angular</option>
+                                                <option value="angular">React</option>
+                                                <option value="vuejs">Vue.js</option>
+                                                <option value="ruby">Ruby</option>
+                                                <option value="php">PHP</option>
+                                                <option value="asp">ASP.NET</option>
+                                                <option value="python">Python</option>
+                                                <option value="mysql">MySQL</option>
                                             </select>
                                             <div class="invalid-feedback">
                                                 Please select a one.
@@ -240,6 +184,55 @@
                 </div>
             </div>
         </div>
-
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Vertical Forms with icon</h4>
+                </div>
+                <div class="card-body">
+                    <div class="basic-form">
+                        <form class="form-valide-with-icon needs-validation" novalidate>
+                            <div class="mb-3">
+                                <label class="text-label form-label" for="validationCustomUsername">Username</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                    <input type="text" class="form-control border-s-1" id="validationCustomUsername"
+                                        placeholder="Enter a username.." required>
+                                    <div class="invalid-feedback">
+                                        Please Enter a username.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="text-label form-label" for="dlab-password">Password *</label>
+                                <div class="input-group transparent-append">
+                                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                                    <input type="password" class="form-control" id="dlab-password"
+                                        placeholder="Choose a safe one.." required>
+                                    <span class="input-group-text show-pass border-s-1 ">
+                                        <i class="fa fa-eye-slash"></i>
+                                        <i class="fa fa-eye"></i>
+                                    </span>
+                                    <div class="invalid-feedback">
+                                        Please Enter a username.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2"
+                                        required>
+                                    <label class="form-check-label" for="invalidCheck2">
+                                        Check Me out
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn me-2 btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-danger light">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 @endsection

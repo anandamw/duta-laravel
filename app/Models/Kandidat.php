@@ -11,8 +11,5 @@ class Kandidat extends Model
 
 
     protected $table = 'kandidats';
-
-    
-
-
+    protected $guarded = ['id'];
 }
